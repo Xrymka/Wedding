@@ -7,49 +7,66 @@
     <title>TushaToshaWedding</title>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-      <div class="container">
-        <ul class="nav__list">
-          <li class="nav__list-item"><a href="#" class="nav__list-link">Видео-приглашение</a></li>
-          <li class="nav__list-item"><a href="#" class="nav__list-link">Информация</a></li>
-          <li class="nav__list-item"><a href="#" class="nav__list-link">Контакты</a></li>
-          <li class="nav__list-item"><a href="#" class="nav__list-link">Фотографии</a></li>
-          <li class="nav__list-item"><a href="#" class="nav__list-link">Ваши пожелания</a></li>
-          <li class="nav__list-item"><a href="#" class="nav__list-link">Регистрация гостей</a></li>
-        </ul>
+        <div class="container">
+          <ul class="nav__list">
+            <li class="nav__list-item"><a href="#" class="nav__list-link">Видео-приглашение</a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link">Информация</a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link">Контакты</a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link nav__list-link--img"><span class="visually-hidden">Картинка</span></a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link">Фотографии</a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link">Ваши пожелания</a></li>
+            <li class="nav__list-item"><a href="#" class="nav__list-link">Регистрация гостей</a></li>
+          </ul>
       </div>
-    </header>
+    </header> <!-- /Header -->
+
+    <!-- Main -->
     <main>
+      <!-- Hero -->
       <section class="hero">
-        <h1 class="hero__title">Тюша & Тоша Wedding</h1>
-        <p class="hero__text">Мы поженимся</p>
-        <time datetime="2020-10-16">16 октября 2020</time>
-      </section>
+        <div class="hero__wrapper">
+          <div class="container">
+            <h1 class="hero__title">Тюша & Тоша Wedding</h1>
+            <p class="hero__text">Мы поженимся</p>
+            <time class="hero__date datetime="2020-10-16">16 октября 2020</time>
+        </div>
+        </div>
+      </section> <!-- /Hero -->
 
+      <!-- Video -->
       <section class="video">
-        <h2 class="section__title">Видео-приглашение</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/xb7tlWvKNZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </section>
+        <div class="container">
+          <h2 class="section__title">Видео-приглашение</h2>
+          <iframe class="video_frame" src="https://www.youtube.com/embed/xb7tlWvKNZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section> <!-- /Video -->
 
+      <!-- Info -->
       <section class="info">
-        <h2 class="section__title">Информация</h2>
-        <ul class="info__list">
-          <li class="info__list-item">Дата и время</li>
-          <li class="info__list-item">Место</li>
-          <li class="info__list-item">Формат</li>
-          <li class="info__list-item">Как добраться</li>
-        </ul>
+        <div class="container">
+          <h2 class="section__title">Информация</h2>
+          <ul class="info__list">
+            <li class="info__list-item"><span class="info__point">Дата и время:</span><address class="info__data"><strong>1 ноября 2020 года</strong>, сбор гостей с 12:30, отправление вечерины в <strong>13:00</strong></address></li>
+            <li class="info__list-item"><span class="info__point">Место:</span><address class="info__data">г. Санкт-Петербург, 8-я советская улица, дом 4</address></li>
+            <li class="info__list-item">Формат</li>
+            <li class="info__list-item">Как добраться</li>
+          </ul>
 
-        <ul class="info__check">
-          <li class="info__list-item">Не дарите цветов</li>
-          <li class="info__list-item">Предпочтение подаркам в конверте</li>
-          <li class="info__list-item">Надевайте удобную обувь</li>
-          <li class="info__list-item">Хорошее настроение</li>
-        </ul>
-      </section>
+          <ul class="info__check">
+            <li class="info__list-item">Не дарите цветов</li>
+            <li class="info__list-item">Предпочтение подаркам в конверте</li>
+            <li class="info__list-item">Надевайте удобную обувь</li>
+            <li class="info__list-item">Хорошее настроение</li>
+          </ul>
+          </div>
+      </section> <!-- /Info -->
 
+      <!-- Ask -->
       <section class="ask">
-        <h2 class="section__title">Опрос</h2>
+        <div class="container">
+          <h2 class="section__title">Опрос</h2>
         <form action="post" autocomplete class="ask__questions">
           <fieldset></fieldset>
           <fieldset>
@@ -61,30 +78,44 @@
             <input type="checkbox" name="" id=""><label for="">Пиво</label>
           </fieldset>
         </form>
-      </section>
+        </div>
+      </section> <!-- /Ask -->
 
+      <!-- Contacts -->
       <section class="contacts">
-        <h2 class="section__title">Как с нами связаться</h2>
+        <div class="container">
+          <h2 class="section__title">Как с нами связаться</h2>
         <a href="tel:+79818627150" class="info__phone">+7 (981) 862-71-50</a> Тюша
         <a href="tel:+79504544715" class="info__phone">+7 (950) 454-47-15</a> Тоша
         <a href="#" class="info__link" target="_blank">instagram</a>
-      </section>
+        </div>
+      </section> <!-- /Contacts -->
 
-      <section class="photo">
-        <h2 class="section__title">Здесь будут фотографии со свадьбы</h2>
+      <!-- Photos -->
+      <section class="photos">
+        <div class="container">
+          <h2 class="section__title">Здесь будут фотографии со свадьбы</h2>
         <p class="photo__text">А пока... хэштег на свадьбу <span>#Tosha&TushaWedding</span> и наши фотографии</p>
-      </section>
+        </div>
+      </section> <!-- /Photos -->
 
+      <!-- Regrets -->
       <section class="regrets">
-        <h2 class="section__title">Ваши пожелания</h2>
+        <div class="container">
+          <h2 class="section__title">Ваши пожелания</h2>
         <p class="regrets__text">Нам будет очень приятно, если Вы напишите нам свои пожаления</p>
         <form action="post">
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="" cols="30" rows="5"></textarea>
         </form>
-      </section>
-    </main>
+        </div>
+      </section> <!-- /Regrets -->
+    </main> <!-- /Main -->
+
+    <!-- Footer -->
     <footer class="footer">
-      Наши контакты:
-    </footer>
+      <div class="container">
+        Наши контакты:
+      </div>
+    </footer> <!-- /Footer -->
 </body>
 </html>
