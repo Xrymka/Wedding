@@ -191,6 +191,12 @@ h1, h2, h3, h4, h5, h6, p, strong {
 }
 
 /* info */
+.info__text {
+  margin-bottom: 25px;
+
+  line-height: 1;
+}
+
 .info__list {
   margin: 0 auto;
 
