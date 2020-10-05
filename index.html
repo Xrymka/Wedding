@@ -47,20 +47,36 @@
       <section class="info">
         <div class="container">
           <h2 class="section__title">Информация</h2>
-          <p class="info__text">Надеемся, вы уже поняли из видео, что мы хотим отметить этот праздник в двух городах. Выберите, пожалуйста, город и вы увидите информацию именно по нему. Конечно, если захотите, мы будем рады видеть вас в обоих городах.</p>
-          <ul class="info__list">
-            <li class="info__list-item"><span class="info__point">Дата и время:</span><address class="info__data"><strong>1 ноября 2020 года</strong>, сбор гостей с 12:30, отправление вечерины в <strong>13:00</strong></address></li>
-            <li class="info__list-item"><span class="info__point">Место:</span><address class="info__data">г. Санкт-Петербург, 8-я советская улица, дом 4</address></li>
-            <li class="info__list-item">Формат</li>
-            <li class="info__list-item">Как добраться</li>
+          <p class="info__text">Сама регистрация пройдёт 16 октября в Москве с нашими родителями. Надеемся, вы уже поняли из видео, что мы хотим отметить этот праздник также и с вами в двух городах. Выберите, пожалуйста, город и вы увидите информацию именно по нему. Конечно, если захотите, мы будем рады видеть вас в обоих городах.</p>
+
+          <form class="info__form" action="POST">
+              <label class="label">Пожалуйста, выберите город:</label>
+              <select class="info__select">
+                <option value="">города тут</option>
+                <option value="2">Санкт-Петербург</option>
+                <option value="1">Пермь</option>
+              </select>
+        </form>
+
+          <ul class="info__list" id="spb">
+            <li class="info__list-item"><span class="info__point">Дата и время:</span> <div class="info__wrap"><address class="info__data"><time datetime="	2020-11-01T13:00">1 ноября 2020 года</time>, сбор гостей с <time>12:30</time>, старт в <time>13:00</time>.<p>Сама вечеринка продлится до 20:00.</p></address></div></li>
+            <li class="info__list-item"><span class="info__point">Формат:</span> <div class="info__wrap"><p class="info__data">Фуршетная вечеринка (мало еды, много веселья)</p></div></li>
+            <li class="info__list-item"><span class="info__point">Место:</span> <div class="info__wrap"><address class="info__data"><a href="https://yandex.ru/maps/-/CCQ36XahhC" target="_blank">DutyFreeLoft, г. Санкт-Петербург, 8-я советская улица, дом 4, 4 этаж</a></address></div></li>
           </ul>
 
+          <ul class="info__list" id="perm">
+            <li class="info__list-item"><span class="info__point">Дата и время:</span> <div class="info__wrap"><address class="info__data"><time datetime="	2020-11-01T13:00">28 ноября 2020 года</time>, сбор гостей с <time>17:30</time>, старт в <time>18:00</time>.<p>Сама вечеринка продлится до 24:00.</p></address></div></li>
+            <li class="info__list-item"><span class="info__point">Формат:</span> <div class="info__wrap"><p class="info__data">Фуршетная вечеринка (мало еды, много веселья)</p></div></li>
+            <li class="info__list-item"><span class="info__point">Место:</span> <div class="info__wrap"><address class="info__data"><a href="https://yandex.ru/maps/-/CCQ3bQwp8D" target="_blank">Testofila, г. Пермь, улица Ленина, дом 44, 1 этаж</a></address></div></li>
+          </ul>
+
+          <h3 class="info__subtitle">И ещё кое-что...</h3>
           <ul class="info__check">
-            <li class="info__list-item">Не дарите цветов</li>
-            <li class="info__list-item">Предпочтение подаркам в конверте</li>
-            <li class="info__list-item">Надевайте удобную обувь</li>
-            <li class="info__list-item">Берите хорошее настроение</li>
-            <li class="info__list-item">Творческие номера приветствуются</li>
+            <li class="info__check-item">Не дарите цветов</li>
+            <li class="info__check-item">Берите хорошее настроение</li>
+            <li class="info__check-item">Надевайте удобную обувь</li>
+            <li class="info__check-item">Предпочтение подаркам в конверте</li>
+            <li class="info__check-item">Творческие номера приветствуются</li>
           </ul>
         </div>
       </section> <!-- /Info -->
@@ -70,7 +86,16 @@
         <div class="container">
           <h2 class="section__title">Опрос</h2>
         <form action="post" autocomplete class="ask__questions">
-          <fieldset></fieldset>
+          <fieldset>
+            <legend>Вы предёте?</legend>
+            <input type="radio" name="answer" id=""> <label for="">Да</label>
+            <input type="radio" name="answer" id=""> <label for="">Нет</label>
+            <input required type="text" name="" id="" placeholder="Введите имя и фамилию"><label for="">Укажите информацию о себе</label>
+            <input required type="number" name="" id="" placeholder="Число"> <label for="">Вы придёте одна/один или с кем-то?</label>
+            <input type="text" name="" id="" placeholder="Введите имя и фамилию">
+            <label for="">Имя и фамилия того, с кем Вы придёте</label>
+            <input required type="text" name="" id="" placeholder="Город"> <label for="">В каком городе Вы будете?</label>
+          </fieldset>
           <fieldset>
             <legend>Что Вы предпочитаете пить?</legend>
             <input type="checkbox" name="" id=""><label for="">Вино</label>
@@ -78,7 +103,11 @@
             <input type="checkbox" name="" id=""><label for="">Виски</label>
             <input type="checkbox" name="" id=""><label for="">Ром</label>
             <input type="checkbox" name="" id=""><label for="">Пиво</label>
+            <input type="checkbox" name="" id=""><label for="">Безалкогольные напитки</label>
           </fieldset>
+          <label for="">Что-то, что мы ещё должны знать:</label>
+          <textarea name="" id="" cols="120" rows="2"></textarea>
+          <input type="submit" value="Отправить">
         </form>
         </div>
       </section> <!-- /Ask -->
