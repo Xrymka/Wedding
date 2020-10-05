@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>TushaToshaWedding</title>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-          <ul class="nav__list">
-            <li class="nav__list-item"><a href="#" class="nav__list-link">Видео-приглашение</a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link">Информация</a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link">Контакты</a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link nav__list-link--img"><span class="visually-hidden">Картинка</span></a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link">Фотографии</a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link">Ваши пожелания</a></li>
-            <li class="nav__list-item"><a href="#" class="nav__list-link">Регистрация гостей</a></li>
-          </ul>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item"><a href="#video" class="nav__list-link">Видео-приглашение</a></li>
+              <li class="nav__list-item"><a href="#information" class="nav__list-link">Информация</a></li>
+              <li class="nav__list-item"><a href="#contacts" class="nav__list-link">Контакты</a></li>
+              <li class="nav__list-item"><a href="#" class="nav__list-link nav__list-link--img"><span class="visually-hidden">Картинка</span></a></li>
+              <li class="nav__list-item"><a href="#pictures" class="nav__list-link">Фотографии</a></li>
+              <li class="nav__list-item"><a href="#regrets" class="nav__list-link">Ваши пожелания</a></li>
+              <li class="nav__list-item"><a href="#registration" class="nav__list-link">Регистрация гостей</a></li>
+            </ul>
+          </nav>
       </div>
     </header> <!-- /Header -->
 
@@ -36,7 +40,7 @@
       </section> <!-- /Hero -->
 
       <!-- Video -->
-      <section class="video">
+      <section class="video" id="video">
         <div class="container">
           <h2 class="section__title">Видео-приглашение</h2>
           <iframe class="video_frame" src="https://www.youtube.com/embed/xb7tlWvKNZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -44,12 +48,12 @@
       </section> <!-- /Video -->
 
       <!-- Info -->
-      <section class="info">
+      <section class="info" id="information">
         <div class="container">
           <h2 class="section__title">Информация</h2>
           <p class="info__text">Сама регистрация пройдёт 16 октября в Москве с нашими родителями. Надеемся, вы уже поняли из видео, что мы хотим отметить этот праздник также и с вами в двух городах. Выберите, пожалуйста, город и вы увидите информацию именно по нему. Конечно, если захотите, мы будем рады видеть вас в обоих городах.</p>
 
-          <form class="info__form" action="POST">
+          <form class="info__form" action="mail.php" method="POST">
               <label class="label">Пожалуйста, выберите город:</label>
               <select class="info__select">
                 <option value="">города тут</option>
@@ -82,41 +86,42 @@
       </section> <!-- /Info -->
 
       <!-- Ask -->
-      <section class="ask">
+      <section class="ask" id="registration">
         <div class="container">
           <h2 class="section__title">Опрос</h2>
-        <form class="ask__form" action="post" autocomplete class="ask__questions">
+        <form class="ask__form" action="mail.php" method="POST" autocomplete class="ask__questions">
           <fieldset>
-            <legend>Вы предёте?</legend>
+            <legend>Вы придёте?</legend>
             <input type="radio" name="answer" id="yes"> <label for="yes">Да</label>
             <input type="radio" name="answer" id="no"> <label for="no">Нет</label>
             <label class="ask__question" for="name">Укажите информацию о себе</label>
             <input class="ask__point" required type="text" name="name" id="name" placeholder="Введите имя и фамилию">
-            <label class="ask__question" for="">Вы придёте одна/один или с кем-то?</label>
-            <input class="ask__point" required type="number" name="" id="" placeholder="Число">
-            <label class="ask__question" for="">Имя и фамилия того, с кем Вы придёте</label>
-            <input class="ask__point" type="text" name="" id="" placeholder="Введите имя и фамилию">
-            <label class="ask__question" for="">В каком городе Вы будете?</label>
-            <input class="ask__point" required type="text" name="" id="" placeholder="Город">
+             <label><input type="radio" name="choose" id="alone">Буду один/одна</label>
+            <label><input type="radio" name="choose" id="together">Буду с парой</label>
+            <label class="ask__question" for="quest">Имя и фамилия того, с кем Вы придёте</label>
+            <input class="ask__point" type="text" name="quest" id="quest" placeholder="Введите имя и фамилию">
+            <p class="ask__question" for="city">В каком городе Вы будете?</p>
+            <input type="checkbox" name="city" id="citySpb"> <label for="citySpb">Санкт-Петербург</label>
+            <input type="checkbox" name="city" id="cityPerm"> <label for="cityPerm">Пермь</label>
           </fieldset>
           <fieldset>
-            <legend>Что Вы предпочитаете пить?</legend>
-            <input class="ask__point" type="checkbox" name="wine" id="wine"><label for="wine">Вино</label>
+            <legend class="ask__question">Что Вы предпочитаете пить?</legend>
+            <input type="checkbox" name="wine" id="wine"><label for="wine">Вино</label>
             <input type="checkbox" name="champagne" id="champagne"><label for="champagne">Шампанское</label>
             <input type="checkbox" name="whiskey" id="whiskey"><label for="whiskey">Виски</label>
             <input type="checkbox" name="rum" id="rum"><label for="rum">Ром</label>
             <input type="checkbox" name="beer" id="beer"><label for="beer">Пиво</label>
             <input type="checkbox" name="noAlko" id="noAlko"><label for="noAlko">Безалкогольные напитки</label>
           </fieldset>
-          <label for="">Что-то, что мы ещё должны знать:</label>
-          <textarea name="" id="" cols="120" rows="2"></textarea>
+          <label for="comment">Что-то, что мы ещё должны знать:</label>
+          <textarea class="send__form" name="comment" id="comment" cols="120" rows="3" placeholder="Здесь можно написать комментарий..."></textarea>
           <input class="btn" type="submit" value="Отправить">
         </form>
         </div>
       </section> <!-- /Ask -->
 
       <!-- Contacts -->
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="section__title">Как с нами связаться</h2>
         <a href="tel:+79818627150" class="contacts__phone">+7 (981) 862-71-50</a> Тюша
@@ -126,20 +131,30 @@
       </section> <!-- /Contacts -->
 
       <!-- Photos -->
-      <section class="photos">
+      <section class="photos" id="pictures">
         <div class="container">
           <h2 class="section__title">Здесь будут фотографии со свадьбы</h2>
-        <p class="photo__text">А пока... хэштег на свадьбу <a href="https://www.instagram.com/explore/tags/ToshaTushaWedding_%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B/">#ToshaTushaWedding</a> и наши фотографии:</p>
+        <p class="photo__text">А пока... хэштег на свадьбу <a href="https://www.instagram.com/explore/tags/tushatoshawedding/" target="_blank">#TushaToshaWedding</a> и наши фотографии:</p>
         </div>
+        <div class="photos__inner">
+          <div class="photos__slider">
+            <div class="slider__img"><img src="img/1.JPG" alt="picture_1"></div>
+            <div class="slider__img"><img src="img/2.JPG" alt="picture_2"></div>
+            <div class="slider__img"><img src="img/3.JPG" alt="picture_3"></div>
+            <div class="slider__img"><img src="img/4.JPG" alt="picture_4"></div>
+            <div class="slider__img"><img src="img/5.JPG" alt="picture_5"></div>
+            <div class="slider__img"><img src="img/6.JPG" alt="picture_6"></div>
+            <div class="slider__img"><img src="img/7.JPG" alt="picture_7"></div>
+          </div>
       </section> <!-- /Photos -->
 
       <!-- Regrets -->
-      <section class="regrets">
+      <section class="regrets" id="regrets">
         <div class="container">
           <h2 class="section__title">Ваши пожелания</h2>
-          <form class="regrets__form" action="post">
-            <label class="regrets__text" for="regrets">Нам будет очень приятно, если Вы напишите нам свои пожаления</label>
-            <textarea class="regrets__send" name="regrets" id="regrets" cols="120" rows="5"></textarea>
+          <form class="regrets__form" action="mail.php" method="POST">
+            <label class="regrets__text" for="regrets">Нам будет очень приятно, если Вы напишите нам</label>
+            <textarea class="send__form" name="regrets" id="regrets" cols="120" rows="5" placeholder="Это место ждёт ваших пожеланий"></textarea>
             <input class="btn" type="submit" value="Отправить">
           </form>
         </div>
@@ -149,8 +164,28 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        Наши контакты:
+        <p class="footer__text">Если у Вас появятся какие-либо вопросы или идеи, Вы можете обратиться к кому-то из нашей команды, кто будет помогать нам сделать этот вечер особенным</p>
+        <div class="footer__inner">
+          <div class="footer__left">
+            <h4 class="footer__title">Санкт-Петербург</h4>
+            <a class="footer__link" href="https://www.instagram.com/olesyafrolova.ru/?igshid=1wzcz8sa7mg7u" target="_blank">Наша ведущая Олеся</a> 
+            <a class="footer__link" href="https://www.instagram.com/manya.photo/?hl=ru" target="_blank">Наш фотограф Мария</a>
+            <a class="footer__link" href="https://www.instagram.com/dfloft/" target="_blank">Место проведения</a>
+          </div>
+          <div class="footer__right">
+            <h4 class="footer__title">Пермь</h4>
+            <a class="footer__link" href="https://www.instagram.com/alekseysol/?igshid=13bvv9ap1rysx" target="_blank">Наш ведущий Алексей</a> 
+            <a class="footer__link" href="#" target="_blank">Тут будет наш фотограф</a>
+            <a class="footer__link" href="https://www.instagram.com/testofila_cafe/" target="_blank">Место проведения</a>
+          </div>
+        </div>
+        <div class="footer__copy">Created by Kulinich &#9829;</div>
       </div>
     </footer> <!-- /Footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
