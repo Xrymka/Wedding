@@ -70,15 +70,36 @@ a {
   color: inherit;
 }
 
+a:hover,
+a:focus {
+  color: rgb(202, 144, 144);
+}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, strong {
+h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   padding: 0;
   margin: 0;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid rgb(83, 20, 20);
+
+  line-height: 1;
+  padding: 10px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: rgb(202, 144, 144);
+  background-color: rgba(83, 20, 20, 0.3);
+  border-color: rgba(83, 20, 20, 0.3);
 }
 
 /* visually-hidden */
@@ -129,11 +150,6 @@ h1, h2, h3, h4, h5, h6, p, strong {
 
 .nav__list-item + .nav__list-item {
   margin-left: 25px;
-}
-
-.nav__list-link:hover,
-.nav__list-link:focus {
-  color: rgb(202, 144, 144);
 }
 
 .nav__list-link:focus {
@@ -251,11 +267,6 @@ h1, h2, h3, h4, h5, h6, p, strong {
   font-style: normal;
 }
 
-.info__data > a:hover,
-.info__data > a:focus {
-  color: rgb(202, 144, 144);
-}
-
 .info__subtitle {
   margin-top: 50px;
   margin-bottom: 25px;
@@ -289,7 +300,69 @@ h1, h2, h3, h4, h5, h6, p, strong {
   border: 1px solid rgb(83, 20, 20);
 }
 
+/* ask */
+.ask {
+  margin-bottom: 65px;
+}
 
+.ask__form {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.ask__question {
+  display: block;
+}
+
+.ask__point {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 15px;
+  min-width: 50%;
+
+  border-radius: 12px;
+  border: 1px solid rgb(83, 20, 20);
+
+  line-height: 1;
+}
+
+
+
+/* contacts */
+.contacts {
+  margin-bottom: 65px;
+}
+
+.contacts__link {
+  display: block;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* photos */
+.photos {
+  margin-bottom: 65px;
+}
+
+/* regrets */
+.regrets {
+  margin-bottom: 65px;
+}
+
+.regrets__form {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.regrets__send {
+  resize: none;
+  width: 100%;
+  padding: 15px;
+
+  border-radius: 12px;
+  line-height: 1;
+}
 
 /* footer */
 .footer {
