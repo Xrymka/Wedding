@@ -51,7 +51,7 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  
+
   border: 3px solid rgb(49, 5, 5);
 }
 
@@ -160,6 +160,11 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   align-items: center;
   text-align: center;
   padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 
   background-color: #fff;
 
@@ -184,11 +189,14 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   box-shadow: 0px 5px 10px 0px rgba(44, 2, 2, 0.5);
 }
 
-.nav__list-link--img {
-  background: url('../img/tt.png') no-repeat center;
-  background-size: cover;
+.nav__list-link svg {
   height: 20px;
-  width: 20px;
+  width: 40px;
+}
+
+.nav__list-link:hover path,
+.nav__list-link:focus path {
+  fill:  rgb(202, 144, 144);
 }
 
 /* hero */
@@ -226,7 +234,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   margin-bottom: 65px;
 }
 
-.video_frame {
+.video__frame {
   min-height: 75vh;
   width: 90%;
 }
@@ -245,6 +253,10 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
 .info__form {
   margin-bottom: 50px;
+}
+
+#spb, #perm {
+  display: none;
 }
 
 .info__select {
@@ -351,6 +363,9 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   line-height: 1;
 }
 
+.ask__hidden {
+  display: none;
+}
 
 /* contacts */
 .contacts {
