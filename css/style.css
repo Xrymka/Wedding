@@ -589,15 +589,24 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   .nav__list {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+
+    font-family: "KindlyJasmine", arial;
+    font-size: 30px;
   }
 
   .nav__list-item {
-    margin-left: auto;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .nav__list-item + .nav__list-item {
+    margin-left: 0;
   }
 
   .nav__list-link {
     display: block;
-    width: 100px;
+    width: 100%;
   }
 
   .hero__title {
@@ -696,6 +705,10 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
     margin: 5px;
   }
 
+  .info__list {
+    line-height: 1.3;
+  }
+
   .contacts__link {
     width: 100%;
   }
@@ -706,6 +719,10 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
   .slider__img > img {
     height: auto;
+  }
+
+  .photo__text {
+    line-height: 1.2;
   }
 
   .footer__inner {
