@@ -12,7 +12,7 @@
     <!-- Header -->
     <header class="header" id="top">
         <div class="container">
-          <nav class="nav">
+          <nav class="nav" id="nav">
             <ul class="nav__list">
               <li class="nav__list-item"><a href="#video" class="nav__list-link">Видео-приглашение</a></li>
               <li class="nav__list-item"><a href="#information" class="nav__list-link">Информация</a></li>
@@ -72,6 +72,11 @@
             </ul>
           </nav>
       </div>
+
+      <button class="burger" type="button" id="navToggle">
+        <span class="burger__item">Menu</span>
+      </button>
+
     </header> <!-- /Header -->
 
     <!-- Main -->
@@ -82,7 +87,7 @@
           <div class="container">
             <h1 class="hero__title">Тюша & Тоша Wedding</h1>
             <p class="hero__text">Мы поженимся</p>
-            <time class="hero__date datetime="2020-10-16">16 октября 2020</time>
+            <time class="hero__date" datetime="2020-10-16">16 октября 2020</time>
         </div>
         </div>
       </section> <!-- /Hero -->
@@ -99,7 +104,7 @@
       <section class="info" id="information">
         <div class="container">
           <h2 class="section__title">Информация</h2>
-          <p class="info__text">Сама регистрация пройдёт 16 октября в Москве с нашими родителями. Надеемся, вы уже поняли из видео, что мы хотим отметить этот праздник также и с вами в двух городах. Выберите, пожалуйста, город и вы увидите информацию именно по нему. Конечно, если захотите, мы будем рады видеть вас в обоих городах.</p>
+          <p class="info__text">Сама регистрация пройдёт 16 октября в Москве с нашими родителями. Надеемся, вы уже поняли из видео, что мы хотим отметить этот праздник также и с вами в двух городах. Выберите, пожалуйста, город и вы увидите информацию именно по нему. Конечно, если захотите, мы будем рады видеть вас в&#160;обоих городах.</p>
 
           <form class="info__form" action="mail.php" method="POST">
               <label class="label">Пожалуйста, выберите город:</label>
@@ -137,25 +142,32 @@
       <section class="ask" id="registration">
         <div class="container">
           <h2 class="section__title">Опрос</h2>
-        <form class="ask__form" action="mail.php" method="POST" autocomplete class="ask__questions">
+        <form class="ask__form" action="mail.php" method="POST" autocomplete="on">
           <fieldset>
             <legend>Вы придёте?</legend>
-            <input type="radio" name="answer" id="yes" value="come" checked> <label for="yes">Да</label>
-            <input type="radio" name="answer" id="no" value="come"> <label for="no">Нет</label>
-            <label class="ask__question" for="name">Укажите информацию о себе</label>
-            <input class="ask__point" required type="text" name="name" id="name" placeholder="Введите имя и фамилию">
-            <label><input type="radio" name="choose" id="alone" value="with" checked>Буду один/одна</label>
-            <label><input type="radio" name="choose" id="together" value="with">Буду с парой</label>
-
-            <label class="ask__question ask__hidden" for="quest" id="quest_name">Имя и фамилия того, с кем Вы придёте</label>
-            <input class="ask__point ask__hidden" type="text" name="quest" id="quest" placeholder="Введите имя и фамилию">
-
-            <p class="ask__question" for="city">В каком городе Вы будете?</p>
-            <input type="checkbox" name="city" id="citySpb" value="city"> <label for="citySpb">Санкт-Петербург</label>
-            <input type="checkbox" name="city" id="cityPerm" value="city"> <label for="cityPerm">Пермь</label>
+            <div class="ask__point">
+              <input type="radio" name="answer" id="yes" value="come" checked> <label for="yes">Да</label>
+              <input type="radio" name="answer" id="no" value="come"> <label for="no">Нет</label>
+            </div>
+            <div id="interview">
+              <label for="name">Укажите информацию о себе
+                <input class="ask__input" required type="text" name="name" id="name" placeholder="Введите имя и фамилию">
+              </label>
+              <div class="ask__point">
+                <label><input type="radio" name="choose" id="alone" value="with" checked>Буду один/одна</label>
+                <label class="block"><input type="radio" name="choose" id="together" value="with">&#160;Буду&#160;с&#160;парой</label>
+              </div>
+              <label class="ask__hidden" for="quest" id="quest_name">Имя и фамилия того, с кем Вы придёте</label>
+              <input class="ask__input ask__hidden" type="text" name="quest" id="quest" placeholder="Введите имя и фамилию">
+              <div class="ask__point">
+                <p>В каком городе Вы будете?</p>
+                <label for="citySpb"><input type="checkbox" name="city" id="citySpb" value="city">&#160;Санкт-Петербург</label>
+                <label class="block" for="cityPerm"><input type="checkbox" name="city" id="cityPerm" value="city">&#160;Пермь</label>
+              </div>
+            </div>
           </fieldset>
-          <fieldset>
-            <legend class="ask__question">Что Вы предпочитаете пить?</legend>
+          <fieldset class="ask__point" id="drinks">
+            <legend>Что Вы предпочитаете пить?</legend>
             <input type="checkbox" name="wine" id="wine" value="drink"><label for="wine">Вино</label>
             <input type="checkbox" name="champagne" id="champagne" value="drink"><label for="champagne">Шампанское</label>
             <input type="checkbox" name="whiskey" id="whiskey" value="drink"><label for="whiskey">Виски</label>
@@ -163,8 +175,10 @@
             <input type="checkbox" name="beer" id="beer" value="drink"><label for="beer">Пиво</label>
             <input type="checkbox" name="noAlko" id="noAlko" value="drink"><label for="noAlko">Безалкогольные напитки</label>
           </fieldset>
+
+          <p class="ask__hidden" id="sorry">Нам очень жаль, что вас не будет рядом с нами в этот день:(</p>
           <label for="comment">Что-то, что мы ещё должны знать:</label>
-          <textarea class="send__form" name="comment" id="comment" cols="120" rows="3" placeholder="Здесь можно написать комментарий..."></textarea>
+          <textarea class="send__form" name="comment" id="comment" cols="5" rows="3" placeholder="Здесь можно написать комментарий..."></textarea>
           <input class="btn" type="submit" value="Отправить">
         </form>
         </div>
@@ -174,8 +188,8 @@
       <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="section__title">Как с нами связаться</h2>
-        <a href="tel:+79818627150" class="contacts__phone">+7 (981) 862-71-50</a> Тюша
-        <a href="tel:+79504544715" class="contacts__phone">+7 (950) 454-47-15</a> Тоша
+        <a href="tel:+79818627150" class="contacts__phone">+7&#160;(981)&#160;862&#160;71&#160;50</a> Тюша
+        <a href="tel:+79504544715" class="contacts__phone">+7&#160;(950)&#160;454&#160;47&#160;15</a>&#160;Тоша
         <a href="https://www.instagram.com/tusha_tosha/?hl=ru" class="contacts__link" target="_blank">Наш инстаграм</a>
         </div>
       </section> <!-- /Contacts -->
@@ -184,7 +198,7 @@
       <section class="photos" id="pictures">
         <div class="container">
           <h2 class="section__title">Здесь будут фотографии со свадьбы</h2>
-        <p class="photo__text">А пока... хэштег на свадьбу <a href="https://www.instagram.com/explore/tags/tushatoshawedding/" target="_blank">#TushaToshaWedding</a> и наши фотографии:</p>
+          <p class="photo__text">А пока... хэштег на свадьбу <a href="https://www.instagram.com/explore/tags/tushatoshawedding/" target="_blank">#TushaToshaWedding</a> и наши фотографии:</p>
         </div>
         <div class="photos__inner">
           <div class="photos__slider">
@@ -196,6 +210,7 @@
             <div class="slider__img"><img src="img/6.JPG" alt="picture_6"></div>
             <div class="slider__img"><img src="img/7.JPG" alt="picture_7"></div>
           </div>
+        </div>
       </section> <!-- /Photos -->
 
       <!-- Regrets -->
@@ -203,8 +218,8 @@
         <div class="container">
           <h2 class="section__title">Ваши пожелания</h2>
           <form class="regrets__form" action="mail.php" method="POST">
-            <label class="regrets__text" for="regrets">Нам будет очень приятно, если Вы напишите нам</label>
-            <textarea class="send__form" name="regrets" id="regrets" cols="120" rows="5" placeholder="Это место ждёт ваших пожеланий" value="text"></textarea>
+            <label class="regrets__text" for="regret">Нам будет очень приятно, если Вы напишите нам</label>
+            <textarea class="send__form" name="regrets" id="regret" cols="5" rows="5" placeholder="Это место ждёт ваших пожеланий" value="text"></textarea>
             <input class="btn" type="submit" value="Отправить">
           </form>
         </div>

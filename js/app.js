@@ -40,17 +40,15 @@ $('.info__select').on('change', function() {
   });
 
   $(document).ready(function(){
-    $(".ask__form").submit(function(e){
+    $(".ask__form").submit(function(){
       if ($('input:checkbox:checked').length < 1){
         alert("Один из пунктов должен быть выбран!");
-        e.preventDefault();
       }
     });
   });
 
   $('#together, #alone').on('click', function() {
     var radio = document.getElementById("together");
-    //var radio = document.getElementById("together");
 
     var label_name = document.getElementById("quest_name");
     var input_name = document.getElementById("quest");
@@ -63,6 +61,45 @@ $('.info__select').on('change', function() {
       input_name.style.display = "none";
     }
   });
+
+  $('#yes, #no').on('click', function() {
+    var radio = document.getElementById("no");
+
+    var interview = document.getElementById("interview");
+    var drinks = document.getElementById("drinks");
+    var text = document.getElementById("sorry");
+
+    if (radio.checked === true){
+      interview.style.display = "none";
+      drinks.style.display = "none";
+      text.style.display = "block";
+    } else {
+      interview.style.display = "block";
+      drinks.style.display = "block";
+      text.style.display = "none";
+    }
+  });
+
+  /* mobile nav */
+  const navToggle = $("#navToggle");
+    const nav = $("#nav");
+
+    navToggle.on("click", function(event) {
+        event.preventDefault();
+
+        $(this).toggleClass("active");
+        nav.toggleClass("show");
+    });
+
+    $("body").on("click", function(event) {
+
+        if (! navToggle.is(event.target) && navToggle.has(event.target).length === 0 &&
+            ! nav.is(event.target) && nav.has(event.target).length === 0)
+            {
+                navToggle.removeClass("active");
+                nav.removeClass("show");
+            };
+    });
 
 });
 
