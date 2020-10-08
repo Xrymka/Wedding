@@ -142,7 +142,7 @@
       <section class="ask" id="registration">
         <div class="container">
           <h2 class="section__title">Опрос</h2>
-        <form class="ask__form" action="mail.php" method="POST" autocomplete="on">
+        <form class="ask__form" id="ask__form"  action="mail.php" method="POST" autocomplete="on">
           <fieldset>
             <legend>Вы придёте?</legend>
             <div class="ask__point">
@@ -217,7 +217,7 @@
       <section class="regrets" id="regrets">
         <div class="container">
           <h2 class="section__title">Ваши пожелания</h2>
-          <form class="regrets__form" action="mail.php" method="POST">
+          <form class="regrets__form" id="regrets__form"  action="mail.php" method="POST">
             <label class="regrets__text" for="regret">Нам будет очень приятно, если Вы напишите нам</label>
             <textarea class="send__form" name="regrets" id="regret" cols="5" rows="5" placeholder="Это место ждёт ваших пожеланий" value="text"></textarea>
             <input class="btn" type="submit" value="Отправить">
