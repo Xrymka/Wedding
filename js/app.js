@@ -39,11 +39,29 @@ $('.info__select').on('change', function() {
   }
   });
 
+  // заполнены или нет обязательные поля
+  var required_fields = false;
+
   $(document).ready(function(){
     $(".ask__form").submit(function(){
-      if ($('input:checkbox:checked').length < 1){
-        alert("Один из пунктов должен быть выбран!");
-      }
+		var name = document.getElementById("name");
+		var radio = document.getElementById("yes");
+
+		// выбрана кнопка что придет
+		if (radio.checked === true) {
+			// но при этом не выбран город или не заполнено имя
+			if ( $('input:checkbox:checked').length < 1 || name.value == ""){
+				// предупреждение и отправка не работает
+				required_fields = false;
+				alert("Заполните обязательное поле Имя и выберите хотя бы один город!"); }
+			else {
+				// всё ок, отправка работает
+				required_fields = true;
+			}
+		} else {
+			// всё ок, отправка работает
+			required_fields = true;
+		}
     });
   });
 
@@ -91,32 +109,61 @@ $('.info__select').on('change', function() {
         nav.toggleClass("show");
     });
 
+    $(".nav__list-item").on("click", function(event) {
+
+      navToggle.removeClass("active");
+      nav.removeClass("show");
+
+    });
+
     $("body").on("click", function(event) {
 
-        if (! navToggle.is(event.target) && navToggle.has(event.target).length === 0 &&
-            ! nav.is(event.target) && nav.has(event.target).length === 0)
-            {
-                navToggle.removeClass("active");
-                nav.removeClass("show");
-            };
-    });
+      if (! navToggle.is(event.target) && navToggle.has(event.target).length === 0 &&
+          ! nav.is(event.target) && nav.has(event.target).length === 0)
+          {
+              navToggle.removeClass("active");
+              nav.removeClass("show");
+          };
+  });
 
   /* send messages */
 	$(document).ready(function () {
-    $('form').submit(function () {
-        var formID = $(this).attr('id');
-        var formNm = $('#' + formID);
-        $.ajax({
-            type: 'POST',
-            url: 'mail.php',
-            data: formNm.serialize(),
-            success: function (data) {
-                $(formNm).html(data);
-            }
-        });
+    $('#ask__form').submit(function () {
+
+		if (required_fields) {
+			var formID = $(this).attr('id');
+			var formNm = $('#' + formID);
+			$.ajax({
+				type: 'POST',
+				url: 'mail.php',
+				data: formNm.serialize(),
+				success: function (data) {
+					$(formNm).html(data);
+				}
+			});
+		}
+
         return false;
-    });
-});
+		});
+	});
+
+		$(document).ready(function () {
+    $('#regrets__form').submit(function () {
+
+		var formID = $(this).attr('id');
+		var formNm = $('#' + formID);
+		$.ajax({
+			type: 'POST',
+			url: 'mail_feedback.php',
+			data: formNm.serialize(),
+			success: function (data) {
+				$(formNm).html(data);
+			}
+		});
+
+      return false;
+		});
+	});
 
 });
 

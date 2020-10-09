@@ -1,8 +1,8 @@
 @font-face {
   font-family: "HangingLetters";
 
-  src: url("../fonts/HangingLetters.woff") format("woff"),
-    url("../fonts/HangingLetters.woff2") format("woff2");
+  src: url("../fonts/HangingLetters.woff2") format("woff2"),
+    url("../fonts/HangingLetters.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: "KindlyJasmine";
 
-  src: url("../fonts/KindlyJasmine.woff") format("woff"),
-    url("../fonts/KindlyJasmine.woff2") format("woff2");
+  src: url("../fonts/KindlyJasmine.woff2") format("woff2"),
+    url("../fonts/KindlyJasmine.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -42,14 +42,21 @@ body {
   line-height: 2;
 }
 
+legend {
+  margin: 0 auto;
+}
+
 button, input, textarea, select {
   font: inherit;
   color: inherit;
 }
 
 input:focus,
+input:active,
 select:focus,
-textarea:focus {
+select:active,
+textarea:focus,
+textarea:active {
   outline: none;
 
   border: 3px solid rgb(49, 5, 5);
@@ -78,7 +85,8 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus,
+a:active {
   color: rgb(202, 144, 144);
   outline: none;
 }
@@ -104,7 +112,8 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn:active {
   color: rgb(202, 144, 144);
   background-color: rgba(83, 20, 20, 0.3);
   border-color: rgba(83, 20, 20, 0.3);
@@ -195,7 +204,8 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 }
 
 .nav__list-link:hover path,
-.nav__list-link:focus path {
+.nav__list-link:focus path,
+.nav__list-link:active path {
   fill:  rgb(202, 144, 144);
 }
 
@@ -439,6 +449,91 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
 .ask__hidden {
   display: none;
+}
+
+#sorry {
+  margin-bottom: 25px;
+}
+
+.ask__hidden > svg {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.check {
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.radio__input,
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.radio__input::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  margin-left: -1em;
+  border-radius: 50%;
+  border: 1px solid rgb(83, 20, 20);
+
+  top: 50%;
+  z-index: 1;
+  transform: translateY(75%);
+}
+
+.radio__input:checked::before {
+  background-color: rgb(83, 20, 20);
+}
+
+.radio__input:focus::before {
+  border-radius: 50%;
+  box-shadow: 0 0 5px #292929;
+}
+
+.radio__input:active::before {
+  border-radius: 50%;
+  box-shadow: 0 0 5px #292929;
+}
+
+.radio__input:focus,
+.radio__input:active,
+.check__input:focus,
+.check__input:active {
+  border: none;
+}
+
+.check__box {
+  position: absolute;
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: -1em;
+
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Crect x="3" y="3" width="14" height="14" fill="%23f1f1f1" stroke="rgb(83, 20, 20)" stroke-width="2" rx="2"/%3E%3C/svg%3E');
+}
+
+.check__input:checked + .check__box {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Crect x="2" y="2" width="16" height="16" fill="rgb(83, 20, 20)" rx="3"/%3E%3Cpolyline fill="none" stroke="%23f1f1f1" stroke-width="3" points="5 9 9 13 15 6"/%3E%3C/svg%3E');
+}
+
+.check__input:focus + .check__box {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Crect width="20" height="20" fill="%23292929" rx="4"/%3E%3Crect width="14" height="14" x="3" y="3" fill="%23f1f1f1" stroke="rgb(83, 20, 20)" stroke-width="2" rx="2"/%3E%3C/svg%3E');
+}
+
+.check__input:checked:focus + .check__box {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Crect width="20" height="20" fill="%23292929" rx="4"/%3E%3Crect width="16" height="16" x="2" y="2" fill="rgb(83, 20, 20)" rx="3"/%3E%3Cpolyline fill="none" stroke="%23f1f1f1" stroke-width="3" points="5 9 9 13 15 6"/%3E%3C/svg%3E');
+  color: #f1f1f1;
+  border: none;
 }
 
 /* contacts */
@@ -793,6 +888,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
     font-size: 24px;
   }
 
+  .ask__input,
   .ask__point {
     margin-bottom: 20px;
   }

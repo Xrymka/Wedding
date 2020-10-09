@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/HangingLetters.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/KindlyJasmine.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon.ico">
+
     <title>TushaToshaWedding</title>
 </head>
 <body>
@@ -96,7 +103,7 @@
       <section class="video" id="video">
         <div class="container">
           <h2 class="section__title">Видео-приглашение</h2>
-          <iframe class="video__frame" src="https://www.youtube-nocookie.com/embed/jDl1CBW--X0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="video__frame" width="560" height="315" src="https://www.youtube.com/embed/nV0pn44bjVM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section> <!-- /Video -->
 
@@ -104,9 +111,9 @@
       <section class="info" id="information">
         <div class="container">
           <h2 class="section__title">Информация</h2>
-          <p class="info__text">Сама регистрация пройдёт 16 октября в Москве с нашими родителями. Надеемся, вы уже поняли из видео, что мы хотим отметить этот праздник также и с вами в двух городах. Выберите, пожалуйста, город и вы увидите информацию именно по нему. Конечно, если захотите, мы будем рады видеть вас в&#160;обоих городах.</p>
+          <p class="info__text">Сама регистрация пройдёт 16&#160;октября в&#160;Москве с&#160;нашими родителями. Надеемся, вы уже поняли из видео, что мы хотим отметить этот праздник также и с&#160;вами в&#160;двух городах. Выберите, пожалуйста, город и вы увидите информацию именно по&#160;нему. Конечно, если захотите, мы будем рады видеть вас в&#160;обоих городах.</p>
 
-          <form class="info__form" action="mail.php" method="POST">
+          <form class="info__form">
               <label class="label">Пожалуйста, выберите город:</label>
               <select class="info__select">
                 <option value="">города тут</option>
@@ -118,13 +125,13 @@
           <ul class="info__list" id="spb">
             <li class="info__list-item"><span class="info__point">Дата и время:</span> <div class="info__wrap"><address class="info__data"><time datetime="	2020-11-01T13:00">1 ноября 2020 года</time>, сбор гостей с <time>12:30</time>, старт в <time>13:00</time>.<p>Сама вечеринка продлится до 20:00.</p></address></div></li>
             <li class="info__list-item"><span class="info__point">Формат:</span> <div class="info__wrap"><p class="info__data">Фуршетная вечеринка (мало еды, много веселья)</p></div></li>
-            <li class="info__list-item"><span class="info__point">Место:</span> <div class="info__wrap"><address class="info__data"><a href="https://yandex.ru/maps/-/CCQ36XahhC" target="_blank">DutyFreeLoft, г. Санкт-Петербург, 8-я советская улица, дом 4, 4 этаж</a></address></div></li>
+            <li class="info__list-item"><span class="info__point">Место:</span> <div class="info__wrap"><address class="info__data"><a href="https://yandex.ru/maps/-/CCQ36XahhC" target="_blank">DutyFreeLoft, г. Санкт-Петербург, 8-я советская улица, дом&#160;4, 4&#160;этаж</a></address></div></li>
           </ul>
 
           <ul class="info__list" id="perm">
-            <li class="info__list-item"><span class="info__point">Дата и время:</span> <div class="info__wrap"><address class="info__data"><time datetime="	2020-11-01T13:00">28 ноября 2020 года</time>, сбор гостей с <time>17:30</time>, старт в <time>18:00</time>.<p>Сама вечеринка продлится до 24:00.</p></address></div></li>
+            <li class="info__list-item"><span class="info__point">Дата и время:</span> <div class="info__wrap"><address class="info__data"><time datetime="	2020-11-01T13:00">28 ноября 2020 года</time>, сбор гостей с&#160;<time>17:30</time>, старт в&#160;<time>18:00</time>.<p>Сама вечеринка продлится до&#160;<time>23:00</time>.</p></address></div></li>
             <li class="info__list-item"><span class="info__point">Формат:</span> <div class="info__wrap"><p class="info__data">Фуршетная вечеринка (мало еды, много веселья)</p></div></li>
-            <li class="info__list-item"><span class="info__point">Место:</span> <div class="info__wrap"><address class="info__data"><a href="https://yandex.ru/maps/-/CCQ3bQwp8D" target="_blank">Testofila, г. Пермь, улица Ленина, дом 44, 1 этаж</a></address></div></li>
+            <li class="info__list-item"><span class="info__point">Место:</span> <div class="info__wrap"><address class="info__data"><a href="https://yandex.ru/maps/-/CCQ3bQwp8D" target="_blank">Testofila, г. Пермь, улица Ленина, дом&#160;44, 1&#160;этаж</a></address></div></li>
           </ul>
 
           <h3 class="info__subtitle">И ещё кое-что...</h3>
@@ -132,7 +139,7 @@
             <li class="info__check-item">Не дарите цветов</li>
             <li class="info__check-item">Берите хорошее настроение</li>
             <li class="info__check-item">Надевайте удобную обувь</li>
-            <li class="info__check-item">Предпочтение подаркам в конверте</li>
+            <li class="info__check-item">Предпочтение подаркам в&#160;конверте</li>
             <li class="info__check-item">Творческие номера приветствуются</li>
           </ul>
         </div>
@@ -146,37 +153,81 @@
           <fieldset>
             <legend>Вы придёте?</legend>
             <div class="ask__point">
-              <input type="radio" name="answer" id="yes" value="come" checked> <label for="yes">Да</label>
-              <input type="radio" name="answer" id="no" value="come"> <label for="no">Нет</label>
+              <label class="check"><input class="radio__input" type="radio" name="answer" id="yes" value="yes" checked> Да</label>
+              <label class="check"><input class="radio__input" type="radio" name="answer" id="no" value="no">Нет</label>
             </div>
             <div id="interview">
-              <label for="name">Укажите информацию о себе
-                <input class="ask__input" required type="text" name="name" id="name" placeholder="Введите имя и фамилию">
+              <label>Укажите информацию о&#160;себе
+                <input class="ask__input" type="text" name="name" id="name" placeholder="Введите имя и фамилию">
               </label>
               <div class="ask__point">
-                <label><input type="radio" name="choose" id="alone" value="with" checked>Буду один/одна</label>
-                <label class="block"><input type="radio" name="choose" id="together" value="with">&#160;Буду&#160;с&#160;парой</label>
+                <label class="check"><input class="radio__input" type="radio" name="choose" id="alone" value="with" checked>Буду один/одна</label>
+                <label class="check block"><input class="radio__input" type="radio" name="choose" id="together" value="with">&#160;Буду&#160;с&#160;парой</label>
               </div>
-              <label class="ask__hidden" for="quest" id="quest_name">Имя и фамилия того, с кем Вы придёте</label>
-              <input class="ask__input ask__hidden" type="text" name="quest" id="quest" placeholder="Введите имя и фамилию">
+              <label class="ask__hidden" id="quest_name">Имя и фамилия того, с&#160;кем Вы придёте
+                <input class="ask__input" type="text" name="quest" id="quest" placeholder="Введите имя и фамилию">
+              </label>
+
               <div class="ask__point">
-                <p>В каком городе Вы будете?</p>
-                <label for="citySpb"><input type="checkbox" name="city" id="citySpb" value="city">&#160;Санкт-Петербург</label>
-                <label class="block" for="cityPerm"><input type="checkbox" name="city" id="cityPerm" value="city">&#160;Пермь</label>
+                <p>В&#160;каком городе Вы будете?</p>
+                <label class="check"><input class="check__input" type="checkbox" name="citySpb" id="citySpb" value="city"><span class="check__box"></span>&#160;Санкт-Петербург</label>
+                <label class="check block"><input class="check__input" type="checkbox" name="cityPerm" id="cityPerm" value="city"><span class="check__box"></span>&#160;Пермь</label>
               </div>
             </div>
           </fieldset>
           <fieldset class="ask__point" id="drinks">
             <legend>Что Вы предпочитаете пить?</legend>
-            <input type="checkbox" name="wine" id="wine" value="drink"><label for="wine">Вино</label>
-            <input type="checkbox" name="champagne" id="champagne" value="drink"><label for="champagne">Шампанское</label>
-            <input type="checkbox" name="whiskey" id="whiskey" value="drink"><label for="whiskey">Виски</label>
-            <input type="checkbox" name="rum" id="rum" value="drink"><label for="rum">Ром</label>
-            <input type="checkbox" name="beer" id="beer" value="drink"><label for="beer">Пиво</label>
-            <input type="checkbox" name="noAlko" id="noAlko" value="drink"><label for="noAlko">Безалкогольные напитки</label>
+            <label class="check"><input class="check__input" type="checkbox" name="wine" id="wine" value="drink"><span class="check__box"></span>Вино</label>
+            <label class="check"><input class="check__input" type="checkbox" name="champagne" id="champagne" value="drink"><span class="check__box"></span>Шампанское</label>
+            <label class="check"><input class="check__input" type="checkbox" name="whiskey" id="whiskey" value="drink"><span class="check__box"></span>Виски</label>
+            <label class="check"><input class="check__input" type="checkbox" name="rum" id="rum" value="drink"><span class="check__box"></span>Ром</label>
+            <label class="check"><input class="check__input" type="checkbox" name="beer" id="beer" value="drink"><span class="check__box"></span>Пиво</label>
+            <label class="check"><input class="check__input" type="checkbox" name="noAlko" id="noAlko" value="drink"><span class="check__box"></span>Безалкогольные&#160;напитки</label>
           </fieldset>
 
-          <p class="ask__hidden" id="sorry">Нам очень жаль, что вас не будет рядом с нами в этот день:(</p>
+          <p class="ask__hidden" id="sorry">Нам очень жаль, что вас не&#160;будет рядом с&#160;нами в&#160;этот день <?xml version="1.0" standalone="no"?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+             "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+             width="1280.000000pt" height="1280.000000pt" viewBox="0 0 1280.000000 1280.000000"
+             preserveAspectRatio="xMidYMid meet">
+            <metadata>
+            Created by potrace 1.15, written by Peter Selinger 2001-2017
+            </metadata>
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+            fill="rgb(83, 20, 20)" stroke="none">
+            <path d="M6100 12794 c-463 -31 -741 -68 -1090 -145 -865 -191 -1718 -582
+            -2430 -1114 -1404 -1050 -2317 -2613 -2529 -4335 -32 -256 -41 -384 -48 -665
+            -21 -907 151 -1803 509 -2647 74 -175 262 -548 358 -713 924 -1578 2489 -2696
+            4270 -3050 1522 -303 3088 -50 4426 714 377 215 722 460 1049 745 152 132 453
+            434 592 592 1184 1351 1743 3107 1558 4893 -67 639 -225 1250 -480 1851 -72
+            168 -261 544 -355 705 -952 1625 -2575 2756 -4420 3079 -352 62 -624 86 -1030
+            90 -179 2 -350 2 -380 0z m575 -574 c1305 -69 2469 -526 3475 -1364 170 -142
+            523 -490 669 -661 691 -808 1151 -1787 1326 -2823 204 -1204 23 -2447 -515
+            -3537 -290 -588 -639 -1073 -1110 -1546 -341 -342 -649 -588 -1044 -834 -782
+            -489 -1636 -773 -2586 -861 -252 -24 -728 -24 -980 0 -993 91 -1876 395 -2685
+            924 -1103 721 -1931 1787 -2346 3022 -414 1234 -408 2535 16 3767 227 660 577
+            1276 1049 1843 156 189 521 553 711 711 598 497 1227 846 1954 1084 652 213
+            1385 311 2066 275z"/>
+            <path d="M3472 9210 l-812 -539 157 -236 c90 -135 162 -234 169 -231 6 2 240
+            156 520 342 280 185 642 425 804 532 162 107 296 196 298 197 5 4 -310 475
+            -317 475 -3 0 -372 -243 -819 -540z"/>
+            <path d="M8330 9514 c-84 -130 -149 -239 -144 -243 30 -27 1647 -1072 1654
+            -1069 11 4 314 468 309 473 -13 12 -1652 1075 -1658 1075 -4 0 -76 -106 -161
+            -236z"/>
+            <path d="M3975 8196 c-190 -47 -339 -195 -390 -387 -19 -69 -19 -199 0 -268
+            45 -169 184 -317 351 -372 338 -112 695 145 697 501 1 97 -17 168 -62 255 -70
+            136 -211 243 -359 274 -68 14 -173 13 -237 -3z"/>
+            <path d="M8503 8196 c-185 -47 -332 -190 -387 -376 -10 -33 -17 -91 -17 -145
+            0 -151 41 -252 148 -365 160 -170 400 -215 612 -115 136 65 257 213 290 355
+            15 66 13 197 -4 263 -43 167 -175 310 -340 368 -75 27 -227 34 -302 15z"/>
+            <path d="M6100 4714 c-19 -2 -80 -9 -135 -14 -514 -54 -1040 -214 -1575 -482
+            -198 -99 -532 -288 -572 -325 -16 -14 -17 -47 -17 -355 0 -264 2 -339 12 -335
+            6 3 75 48 152 102 707 490 1427 771 2133 835 172 16 605 8 762 -15 710 -100
+            1370 -386 2111 -914 19 -13 19 -7 19 335 l0 349 -28 16 c-15 9 -80 48 -144 87
+            -476 291 -1015 514 -1498 622 -336 75 -486 91 -865 95 -176 2 -336 1 -355 -1z"/>
+            </g>
+            </svg></p>
           <label for="comment">Что-то, что мы ещё должны знать:</label>
           <textarea class="send__form" name="comment" id="comment" cols="5" rows="3" placeholder="Здесь можно написать комментарий..."></textarea>
           <input class="btn" type="submit" value="Отправить">
