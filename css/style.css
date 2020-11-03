@@ -358,7 +358,6 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
 .info__list,
 .info__check  {
-
   margin: 0 auto;
 
   border-radius: 12px;
@@ -420,6 +419,10 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   border: 1px solid rgb(83, 20, 20);
 }
 
+#more__info {
+  display: none;
+}
+
 /* ask */
 .ask {
   margin-bottom: 65px;
@@ -463,6 +466,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
 .check {
   position: relative;
+  display: block;
   padding-left: 1.2em;
 }
 
@@ -474,10 +478,6 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   appearance: none;
 }
 
-.check__input {
-  top: 0;
-  right: 0;
-}
 
 .radio__input::before {
   content: '';
@@ -660,12 +660,6 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   }
 }
 
-@media (max-width: 1082px) {
-  .ask__form {
-    max-width: 59%;
-  }
-}
-
 @media (max-width: 991px) {
   .burger__item {
     display: block;
@@ -742,19 +736,6 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   }
 }
 
-@media (max-width: 918px) {
-  .ask__form {
-    max-width: 59%;
-  }
-}
-
-@media (max-width: 840px) {
-  .ask__form {
-    max-width: 65%;
-  }
-}
-
-
 @media (max-width: 767px) {
   .hero__title {
     font-size: 120px;
@@ -789,13 +770,6 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
     max-width: 85%;
   }
 }
-
-@media (max-width: 593px) {
-  .ask__form {
-    max-width: 90%;
-  }
-}
-
 
 @media (max-width: 567px) {
   .hero__title {
@@ -848,10 +822,6 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
   .contacts__link {
     width: 100%;
-  }
-
-  .check {
-    display: block;
   }
 
   .ask__form {

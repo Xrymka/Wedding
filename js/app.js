@@ -38,8 +38,12 @@ $('.info__select').on('change', function() {
 
   if ($(this).val() == 2) {
     $('#perm').show();
+    $('#registration').show();
+    $('#more__info').show();
   } else {
     $('#perm').hide();
+    $('#registration').hide();
+    $('#more__info').hide();
   }
   });
 
