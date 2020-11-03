@@ -28,8 +28,12 @@ $(function () {
 $('.info__select').on('change', function() {
   if ($(this).val() == 1) {
     $('#spb').show();
+    $('#registration').hide();
+    $('#more__info').hide();
   } else {
     $('#spb').hide();
+    $('#registration').show();
+    $('#more__info').show();
   }
 
   if ($(this).val() == 2) {

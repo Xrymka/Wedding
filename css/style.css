@@ -358,6 +358,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
 .info__list,
 .info__check  {
+
   margin: 0 auto;
 
   border-radius: 12px;
@@ -425,7 +426,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 }
 
 .ask__form {
-  max-width: 70%;
+  max-width: 50%;
   margin: 0 auto;
 
   line-height: 1.5;
@@ -471,6 +472,11 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.check__input {
+  top: 0;
+  right: 0;
 }
 
 .radio__input::before {
@@ -648,6 +654,16 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   .photos__inner {
     width: 100%;
   }
+
+  .ask__form {
+    max-width: 54%;
+  }
+}
+
+@media (max-width: 1082px) {
+  .ask__form {
+    max-width: 59%;
+  }
 }
 
 @media (max-width: 991px) {
@@ -720,6 +736,22 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   .contacts__link {
     width: 50%;
   }
+
+  .ask__form {
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 918px) {
+  .ask__form {
+    max-width: 59%;
+  }
+}
+
+@media (max-width: 840px) {
+  .ask__form {
+    max-width: 65%;
+  }
 }
 
 
@@ -749,11 +781,21 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
     min-width: 80%;
   }
 
-  .ask__form,
   .regrets__form {
     max-width: 100%;
   }
+
+  .ask__form {
+    max-width: 85%;
+  }
 }
+
+@media (max-width: 593px) {
+  .ask__form {
+    max-width: 90%;
+  }
+}
+
 
 @media (max-width: 567px) {
   .hero__title {
@@ -808,6 +850,10 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
     width: 100%;
   }
 
+  .check {
+    display: block;
+  }
+
   .ask__form {
     line-height: 1.2;
   }
@@ -823,7 +869,6 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   .footer__inner {
     flex-wrap: wrap;
   }
-
 }
 
 @media (max-width: 440px) {
