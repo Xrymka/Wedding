@@ -25,7 +25,7 @@ $(function () {
   });
 
   /* hidden info */
-$('.info__select').on('change', function() {
+$('.photos__select').on('change', function() {
   if ($(this).val() == 1) {
     $('#spb').show();
     $('#guests__spb').show();
@@ -42,7 +42,6 @@ $('.info__select').on('change', function() {
   if ($(this).val() == 2) {
     $('#perm').show();
     $('#guests__perm').show();
-    $('#guests__spb').hide();
     // $('#registration').show();
     // $('#more__info').show();
   } else {
@@ -53,31 +52,31 @@ $('.info__select').on('change', function() {
   }
   });
 
-  // заполнены или нет обязательные поля
-  var required_fields = false;
+  // // заполнены или нет обязательные поля
+  // var required_fields = false;
 
-  $(document).ready(function(){
-    $(".ask__form").submit(function(){
-		var name = document.getElementById("name");
-		var radio = document.getElementById("yes");
+  // $(document).ready(function(){
+  //   $(".ask__form").submit(function(){
+	// 	var name = document.getElementById("name");
+	// 	var radio = document.getElementById("yes");
 
-		// выбрана кнопка что придет
-		if (radio.checked === true) {
-			// но при этом не выбран город или не заполнено имя
-			if ( $('input:checkbox:checked').length < 1 || name.value == ""){
-				// предупреждение и отправка не работает
-				required_fields = false;
-				alert("Заполните обязательное поле Имя и выберите хотя бы один город!"); }
-			else {
-				// всё ок, отправка работает
-				required_fields = true;
-			}
-		} else {
-			// всё ок, отправка работает
-			required_fields = true;
-		}
-    });
-  });
+	// 	// выбрана кнопка что придет
+	// 	if (radio.checked === true) {
+	// 		// но при этом не выбран город или не заполнено имя
+	// 		if ( $('input:checkbox:checked').length < 1 || name.value == ""){
+	// 			// предупреждение и отправка не работает
+	// 			required_fields = false;
+	// 			alert("Заполните обязательное поле Имя и выберите хотя бы один город!"); }
+	// 		else {
+	// 			// всё ок, отправка работает
+	// 			required_fields = true;
+	// 		}
+	// 	} else {
+	// 		// всё ок, отправка работает
+	// 		required_fields = true;
+	// 	}
+  //   });
+  // });
 
   // $('#together, #alone').on('click', function() {
   //   var radio = document.getElementById("together");

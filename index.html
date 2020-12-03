@@ -111,28 +111,9 @@
       <section class="info" id="information">
         <div class="container">
           <h2 class="section__title">Информация</h2>
-          <p class="info__text">Сама регистрация прошла 16&#160;октября в&#160;Москве с&#160;нашими родителями. В&#160;Питере праздник отгремел&#160;01&#160;ноября, а&#160;в&#160;Перми мы праздновали 28 ноября. Выберите, пожалуйста, город и&#160;вы&#160;увидите медиа именно по&#160;нему.</p>
-
-          <form class="info__form">
-              <label class="label">Пожалуйста, выберите город:</label>
-              <select class="info__select">
-                <option value="">города тут</option>
-                <option value="1">Санкт-Петербург</option>
-                <option value="2">Пермь</option>
-              </select>
-        </form>
-
-          <div class="info__list" id="spb">
-            <p>Спасибо, что были с нами в этот день!</p>
-            <p>Это было превосходно! Надеемся, вам всё понравилось и&#160;вы&#160;также замечательно провели время,&#160;как&#160;и&#160;мы.</p>
-            <p>Видео размещено ниже, а тут найдёте ссылку для&#160;скачивания фотографий (<a class="info__link" href="https://yadi.sk/d/tD29vOVxQx-5oQ" target="_blank">ССЫЛКА</a>&#160;действительна&#160;до&#160;25.12.2020).</p>
-          </div>
-
-          <div class="info__list" id="perm">
-            <p>Спасибо, что были с нами в этот день!</p>
-            <p>Это было превосходно! Надеемся, вам всё понравилось и&#160;вы&#160;также замечательно провели время, как&#160;и&#160;мы.</p>
-            <p>Фотографии и&#160;видео позже будут размещены здесь, а&#160;также ссылка на&#160;скачивания фотографий.</p>
-          </div>
+          <p class="info__text">Сама регистрация прошла 16&#160;октября в&#160;Москве с&#160;нашими родителями. В&#160;Питере праздник отгремел&#160;01&#160;ноября, а&#160;в&#160;Перми мы праздновали 28 ноября. Выберите, пожалуйста, город и&#160;вы&#160;увидите видео и&#160;ссылку для&#160;скачивания фотографий.</p>
+          <p>Спасибо, что были с нами в этот день!</p>
+          <p>Это было превосходно! Надеемся, вам всё понравилось и&#160;вы&#160;также замечательно провели время,&#160;как&#160;и&#160;мы.</p>
 
           <!-- <ul class="info__list" id="perm">
             <li class="info__list-item"><span class="info__point">Дата и время:</span> <div class="info__wrap"><address class="info__data"><time datetime="	2020-11-01T13:00">28 ноября 2020 года</time>, сбор гостей с&#160;<time>17:30</time>, старт в&#160;<time>18:00</time>.<p>Сама вечеринка продлится до&#160;<time>00:00</time>.</p></address></div></li>
@@ -237,6 +218,152 @@
         </div>
       </section> /Ask -->
 
+      <!-- Contacts -->
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <h2 class="section__title">Как с нами связаться</h2>
+        <a href="tel:+79818627150" class="contacts__phone">+7&#160;(981)&#160;862&#160;71&#160;50</a> Тюша
+        <a href="tel:+79504544715" class="contacts__phone">+7&#160;(950)&#160;454&#160;47&#160;15</a>&#160;Тоша
+        <a href="https://www.instagram.com/tusha_tosha/?hl=ru" class="contacts__link" target="_blank">Наш инстаграм</a>
+        </div>
+      </section> <!-- /Contacts -->
+
+      <!-- Photos -->
+      <section class="photos" id="pictures">
+        <div class="container">
+          <h2 class="section__title">Фотографии и видео со свадьбы</h2>
+          <form class="photos__form">
+            <label class="label">Пожалуйста, выберите город:</label>
+            <select class="photos__select">
+              <option value="">города тут</option>
+              <option value="1">Санкт-Петербург</option>
+              <option value="2">Пермь</option>
+            </select>
+          </form>
+          <div class="photos__inner" id="spb">
+          <p class="photo__text">Видео:</p>
+          <iframe class="video__frame" width="560" height="315" src="https://www.youtube.com/embed/KdXzc2q5BE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p class="photo__text">Наш хэштег <a href="https://www.instagram.com/explore/tags/tushatoshawedding/" target="_blank">#TushaToshaWedding</a> и&#160;часть&#160;фотографий:</p>
+          <div class="photos__inner">
+            <div class="photos__slider">
+              <div class="slider__img"><img src="img/1.webp" alt="picture_1"></div>
+              <div class="slider__img"><img src="img/2.webp" alt="picture_2"></div>
+              <div class="slider__img"><img src="img/3.webp" alt="picture_3"></div>
+              <div class="slider__img"><img src="img/4.webp" alt="picture_4"></div>
+              <div class="slider__img"><img src="img/5.webp" alt="picture_5"></div>
+            </div>
+          </div>
+          <ul class="photos__list">
+            <li class="photos__item">
+              <a href="img/fancy/pic_1.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_1-min.jpg" alt="photo_1" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_2.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_2-min.jpg" alt="photo_2" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_3.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_3-min.jpg" alt="photo_3" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_4.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_4-min.jpg" alt="photo_4" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_5.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_5-min.jpg" alt="photo_5" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_6.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_6-min.jpg" alt="photo_6" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_7.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_7-min.jpg" alt="photo_7" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_8.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_8-min.jpg" alt="photo_8" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_9.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_9-min.jpg" alt="photo_9" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_10.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_10-min.jpg" alt="photo_10" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_11.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_11-min.jpg" alt="photo_11" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_12.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_12-min.jpg" alt="photo_12" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_13.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_13-min.jpg" alt="photo_13" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_14.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_14-min.jpg" alt="photo_14" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_15.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_15-min.jpg" alt="photo_15" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_16.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_16-min.jpg" alt="photo_16" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_17.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_17-min.jpg" alt="photo_17" class="photos__img">
+              </a>
+            </li>
+            <li class="photos__item">
+              <a href="img/fancy/pic_18.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
+                <img src="img/fancy/pic_18-min.jpg" alt="photo_18" class="photos__img">
+              </a>
+            </li>
+          </ul>
+          <a class="photos__link" href="https://yadi.sk/d/tD29vOVxQx-5oQ" target="_blank">ССЫЛКА НА ФОТОГРАФИИ</a>
+          </div>
+
+          <div class="photos__inner" id="perm">
+            <p class="photo__text">Здесь будет видео с вечеринки:)</p>
+            <p class="photo__text">Наш хэштег <a href="https://www.instagram.com/explore/tags/tushatoshawedding/" target="_blank">#TushaToshaWedding</a> и&#160;часть&#160;фотографий:</p>
+            <div class="photos__inner">
+              <div class="photos__slider">
+                <div class="slider__img"><img src="img/perm_1.webp" alt="picture_1"></div>
+                <div class="slider__img"><img src="img/perm_2.webp" alt="picture_2"></div>
+                <div class="slider__img"><img src="img/perm_3.webp" alt="picture_3"></div>
+                <div class="slider__img"><img src="img/perm_4.webp" alt="picture_4"></div>
+              </div>
+            </div>
+            Здесь будет ссылка на фотографии с вечеринки:)
+            </div>
+        </div>
+      </section> <!-- /Photos -->
+
       <!-- Guests -->
       <section class="guests" id="guests">
         <div class="container">
@@ -259,7 +386,7 @@
                 <a href="https://www.instagram.com/sadohina_ya/" target="_blank">Ксюша Подольская</a>
               </li>
               <li class="guests__list-item">
-                Валик Подольский
+                <a href="https://vk.com/baik23" target="_blank">Валик Подольский</a>
               </li>
               <li class="guests__list-item">
                 <a href="https://www.instagram.com/markbatashov/" target="_blank">Марк Баташов</a>
@@ -419,133 +546,12 @@
         </div>
       </section>
 
-      <!-- Contacts -->
-      <section class="contacts" id="contacts">
-        <div class="container">
-          <h2 class="section__title">Как с нами связаться</h2>
-        <a href="tel:+79818627150" class="contacts__phone">+7&#160;(981)&#160;862&#160;71&#160;50</a> Тюша
-        <a href="tel:+79504544715" class="contacts__phone">+7&#160;(950)&#160;454&#160;47&#160;15</a>&#160;Тоша
-        <a href="https://www.instagram.com/tusha_tosha/?hl=ru" class="contacts__link" target="_blank">Наш инстаграм</a>
-        </div>
-      </section> <!-- /Contacts -->
-
-      <!-- Photos -->
-      <section class="photos" id="pictures">
-        <div class="container">
-          <h2 class="section__title">Фотографии и видео со свадьбы</h2>
-          <p class="photo__text">Видео с Питера:</p>
-          <iframe class="video__frame" width="560" height="315" src="https://www.youtube.com/embed/KdXzc2q5BE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p class="photo__text">Наш хэштег <a href="https://www.instagram.com/explore/tags/tushatoshawedding/" target="_blank">#TushaToshaWedding</a> и&#160;часть&#160;фотографий:</p>
-          <div class="photos__inner">
-            <div class="photos__slider">
-              <div class="slider__img"><img src="img/1.webp" alt="picture_1"></div>
-              <div class="slider__img"><img src="img/2.webp" alt="picture_2"></div>
-              <div class="slider__img"><img src="img/3.webp" alt="picture_3"></div>
-              <div class="slider__img"><img src="img/4.webp" alt="picture_4"></div>
-              <div class="slider__img"><img src="img/5.webp" alt="picture_5"></div>
-            </div>
-          </div>
-          <ul class="photos__list">
-            <li class="photos__item">
-              <a href="img/fancy/pic_1.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_1-min.jpg" alt="photo_1" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_2.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_2-min.jpg" alt="photo_2" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_3.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_3-min.jpg" alt="photo_3" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_4.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_4-min.jpg" alt="photo_4" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_5.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_5-min.jpg" alt="photo_5" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_6.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_6-min.jpg" alt="photo_6" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_7.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_7-min.jpg" alt="photo_7" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_8.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_8-min.jpg" alt="photo_8" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_9.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_9-min.jpg" alt="photo_9" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_10.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_10-min.jpg" alt="photo_10" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_11.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_11-min.jpg" alt="photo_11" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_12.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_12-min.jpg" alt="photo_12" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_13.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_13-min.jpg" alt="photo_13" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_14.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_14-min.jpg" alt="photo_14" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_15.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_15-min.jpg" alt="photo_15" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_16.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_16-min.jpg" alt="photo_16" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_17.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_17-min.jpg" alt="photo_17" class="photos__img">
-              </a>
-            </li>
-            <li class="photos__item">
-              <a href="img/fancy/pic_18.webp" class="photos__link" data-fancybox="images" data-width="2048" data-height="1365">
-                <img src="img/fancy/pic_18-min.jpg" alt="photo_18" class="photos__img">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section> <!-- /Photos -->
-
       <!-- Regrets -->
       <section class="regrets" id="regrets">
         <div class="container">
           <h2 class="section__title">Ваши пожелания</h2>
           <form class="regrets__form" id="regrets__form"  action="mail.php" method="POST">
-            <label class="regrets__text" for="regret">Нам будет очень приятно, если Вы напишите нам</label>
+            <label class="regrets__text" for="regret">Нам будет очень приятно, если Вы&#160;напишите&#160;нам</label>
             <textarea class="send__form" name="regrets" id="regret" cols="5" rows="5" placeholder="Это место ждёт ваших пожеланий" value="text"></textarea>
             <input class="btn" type="submit" value="Отправить">
           </form>

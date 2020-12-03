@@ -333,34 +333,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   line-height: 1;
 }
 
-.info__form {
-  margin-bottom: 50px;
-}
-
-.info__link {
-  font-weight: 700;
-}
-
-#spb, #perm {
-  display: none;
-}
-
-.info__select {
-  padding: 5px;
-  background-color: rgba(83, 20, 20, 0.1);
-
-  border-radius: 12px;
-  border-color: rgb(83, 20, 20);
-  z-index: 100;
-  vertical-align: center;
-  text-align-last: center;
-}
-
-.info__select > option:hover {
-  background-color: rgba(83, 20, 20, 0.3);
-}
-
-.info__list,
+/* .info__list,
 .info__check  {
   margin: 0 auto;
   padding: 15px;
@@ -423,7 +396,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   transform: translateY(-50%);
   border-radius: 5px;
   border: 1px solid rgb(83, 20, 20);
-}
+} */
 
 /* #more__info {
   display: none;
@@ -581,6 +554,33 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   margin-bottom: 65px;
 }
 
+.photos__form {
+  margin-bottom: 50px;
+}
+
+.photos__link {
+  font-weight: 700;
+}
+
+#spb, #perm {
+  display: none;
+}
+
+.photos__select {
+  padding: 5px;
+  background-color: rgba(83, 20, 20, 0.1);
+
+  border-radius: 12px;
+  border-color: rgb(83, 20, 20);
+  z-index: 100;
+  vertical-align: center;
+  text-align-last: center;
+}
+
+.photos__select > option:hover {
+  background-color: rgba(83, 20, 20, 0.3);
+}
+
 .slick-btn {
   position: absolute;
   top: 50%;
@@ -621,6 +621,11 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+#spb__title,
+#video__spb {
+  display: none;
 }
 
 /* regrets */
@@ -839,11 +844,11 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
     min-height: 30vh;
   }
 
-  .info__form {
+  .photos__form {
     margin-bottom: 10px;
   }
 
-  .info__subtitle {
+  /* .info__subtitle {
     margin-top: 25px;
   }
 
@@ -859,7 +864,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
   .info__list {
     line-height: 1.3;
-  }
+  } */
 
   .guests__list-item {
     width: 100%;
@@ -930,12 +935,12 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
     line-height: 1.2;
   }
 
-  .info__select {
+  .photos__select {
     max-width: 50%;
     margin-bottom: 25px;
   }
 
-  .info__point {
+  /* .info__point {
     width: 100%;
     margin-bottom: 15px;
 
@@ -950,7 +955,7 @@ h1, h2, h3, h4, h5, h6, p, strong, fieldset {
 
   .info__wrap {
     width: 100%;
-  }
+  } */
 
   input::placeholder {
     font-size: 24px;
