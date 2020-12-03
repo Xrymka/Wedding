@@ -28,22 +28,28 @@ $(function () {
 $('.info__select').on('change', function() {
   if ($(this).val() == 1) {
     $('#spb').show();
-    $('#registration').hide();
-    $('#more__info').hide();
+    $('#guests__spb').show();
+    $('#guests__perm').hide();
+    // $('#registration').hide();
+    // $('#more__info').hide();
   } else {
     $('#spb').hide();
-    $('#registration').show();
-    $('#more__info').show();
+    $('#guests__spb').hide();
+    // $('#registration').show();
+    // $('#more__info').show();
   }
 
   if ($(this).val() == 2) {
     $('#perm').show();
-    $('#registration').show();
-    $('#more__info').show();
+    $('#guests__perm').show();
+    $('#guests__spb').hide();
+    // $('#registration').show();
+    // $('#more__info').show();
   } else {
     $('#perm').hide();
-    $('#registration').hide();
-    $('#more__info').hide();
+    $('#guests__perm').hide();
+    // $('#registration').hide();
+    // $('#more__info').hide();
   }
   });
 
@@ -73,38 +79,38 @@ $('.info__select').on('change', function() {
     });
   });
 
-  $('#together, #alone').on('click', function() {
-    var radio = document.getElementById("together");
+  // $('#together, #alone').on('click', function() {
+  //   var radio = document.getElementById("together");
 
-    var label_name = document.getElementById("quest_name");
-    var input_name = document.getElementById("quest");
+  //   var label_name = document.getElementById("quest_name");
+  //   var input_name = document.getElementById("quest");
 
-    if (radio.checked === true){
-      label_name.style.display = "block";
-      input_name.style.display = "block";
-    } else {
-      label_name.style.display = "none";
-      input_name.style.display = "none";
-    }
-  });
+  //   if (radio.checked === true){
+  //     label_name.style.display = "block";
+  //     input_name.style.display = "block";
+  //   } else {
+  //     label_name.style.display = "none";
+  //     input_name.style.display = "none";
+  //   }
+  // });
 
-  $('#yes, #no').on('click', function() {
-    var radio = document.getElementById("no");
+  // $('#yes, #no').on('click', function() {
+  //   var radio = document.getElementById("no");
 
-    var interview = document.getElementById("interview");
-    var drinks = document.getElementById("drinks");
-    var text = document.getElementById("sorry");
+  //   var interview = document.getElementById("interview");
+  //   var drinks = document.getElementById("drinks");
+  //   var text = document.getElementById("sorry");
 
-    if (radio.checked === true){
-      interview.style.display = "none";
-      drinks.style.display = "none";
-      text.style.display = "block";
-    } else {
-      interview.style.display = "block";
-      drinks.style.display = "block";
-      text.style.display = "none";
-    }
-  });
+  //   if (radio.checked === true){
+  //     interview.style.display = "none";
+  //     drinks.style.display = "none";
+  //     text.style.display = "block";
+  //   } else {
+  //     interview.style.display = "block";
+  //     drinks.style.display = "block";
+  //     text.style.display = "none";
+  //   }
+  // });
 
   /* mobile nav */
   const navToggle = $("#navToggle");
@@ -135,25 +141,25 @@ $('.info__select').on('change', function() {
   });
 
   /* send messages */
-	$(document).ready(function () {
-    $('#ask__form').submit(function () {
+	// $(document).ready(function () {
+  //   $('#ask__form').submit(function () {
 
-		if (required_fields) {
-			var formID = $(this).attr('id');
-			var formNm = $('#' + formID);
-			$.ajax({
-				type: 'POST',
-				url: 'mail.php',
-				data: formNm.serialize(),
-				success: function (data) {
-					$(formNm).html(data);
-				}
-			});
-		}
+	// 	if (required_fields) {
+	// 		var formID = $(this).attr('id');
+	// 		var formNm = $('#' + formID);
+	// 		$.ajax({
+	// 			type: 'POST',
+	// 			url: 'mail.php',
+	// 			data: formNm.serialize(),
+	// 			success: function (data) {
+	// 				$(formNm).html(data);
+	// 			}
+	// 		});
+	// 	}
 
-        return false;
-		});
-	});
+  //       return false;
+	// 	});
+	// });
 
 		$(document).ready(function () {
     $('#regrets__form').submit(function () {
